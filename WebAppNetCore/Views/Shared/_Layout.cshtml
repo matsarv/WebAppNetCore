@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @*<environment include="Development">*@
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />*@
+    <link href="~/css/site.css" rel="stylesheet" />
+    @*</environment>*@
+</head>
+<body>
+    <header class="clearfix">
+        @*<h1>Lexikon</h1>*@
+        <a href="/">@*<img height="30" src="~/images/logo.gif" alt="Logo">*@</a>
+        @*<a asp-controller="Home" asp-action="Index"><img height="30" src="~/images/logo.gif" alt="Logo"></a>*@
+        <img height="30" src="~/images/logo.gif" alt="Logo">
+
+        <nav>
+
+
+            <ul>
+                <li>
+                    @Html.ActionLink("Home page", "Index", "Home")
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Core">Core Page</a>
+                    @*@Html.ActionLink("Core page", "Core")*@
+                </li>
+                <li>
+                    <a asp-controller="Home" asp-action="Swing">Golf Swing</a>
+                </li>
+                <li>
+                    <a asp-controller="Bakery" asp-action="Index">Bakery</a>
+                </li>
+                <li>
+                    <a asp-controller="ToDoMemo" asp-action="Index">ToDo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer>
+        <p>Copyright &copy; Mats Arvidsson </p>
+    </footer>
+
+</body>
+</html>

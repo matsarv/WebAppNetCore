@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Session Index";
+    Layout = "_Layout";
+}
+
+<h2>Session</h2>
+
+<p><a href="/ToDoMemo/MakeToDo">Set Session Parameters </a></p>
+<p>Stored in session</p>
+
+@if (ViewBag.ToDo != null)
+{
+
+    <h3>Todo: @ViewBag.ToDo</h3>
+}
+
+@if (ViewBag.Prio != null)
+{
+
+    <h3>Prio: @ViewBag.Prio</h3>
+}

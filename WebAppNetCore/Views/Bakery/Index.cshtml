@@ -1,0 +1,42 @@
+﻿@model List<Cake>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<form method="post">
+
+    <input type="text" name="name" value="" placeholder="Name" />
+    <input type="number" min="0"name="price" value="" placeholder="Price"/>
+    <input type="text" name="details" value=""placeholder="Details" />
+    <input type="submit" value="Create" />
+
+</form>
+
+<p><hr /></p>
+
+
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Details</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Details</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+
